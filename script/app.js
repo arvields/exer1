@@ -1,17 +1,19 @@
-function displayProduct() {
-  let firstNum = Number(document.getElementById('firstNum').innerHTML)
-  let secondNum = Number(document.getElementById('secondNum').innerHTML)
+document.addEventListener("DOMContentLoaded", function () {
 
-  let total = firstNum * secondNum;
-  document.getElementById("productAnswer").innerHTML = ` ${firstNum} * ${secondNum}, equals to ${total}` ;
-}
+  function displayDiff() {
+    let firstNum = Number(document.getElementById('firstNum').innerHTML);
+    let secondNum = Number(document.getElementById('secondNum').innerHTML);
+    let diffTotal = firstNum - secondNum; // Corrected the variable name
+    document.getElementById("diffanswer").innerHTML = ${firstNum} - ${secondNum}, equals to ${diffTotal};
+  }
+  
+  function displayMult() {
+  let firstNum = Number(document.getElementById('firstNum').innerHTML);
+  let secondNum = Number(document.getElementById('secondNum').innerHTML);
+  let product = firstNum * secondNum;
+  document.getElementById("productanswer").innerHTML = ${firstNum} * ${secondNum}, equals to ${product};
+  }
 
-function displayDiff() {
-  let firstNum = Number(document.getElementById('firstNum').innerHTML)
-  let secondNum = Number(document.getElementById('secondNum').innerHTML)
-
-let total = firstNum - secondNum;
-  document.getElementById("diffAnswer").innerHTML = ` ${firstNum} - ${secondNum}, equals to ${total}` ;
-
-document.getElementById('productButton').addEventListener("click", displayProduct);
-document.getElementById('diffButton').addEventListener("click", displayDiff);
+  document.getElementById('MultButton').addEventListener("click", displayMult);
+  document.getElementById('DiffButton').addEventListener("click", displayDiff);
+});
